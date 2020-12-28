@@ -1,0 +1,210 @@
+{include file="common@public/header" /}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md2"></div>
+        <div class="layui-card layui-col-md8">
+            <div class="layui-card-header">三国服务器 THINKPHP 6.0 自动化后台2.0  - Step1 开发配置写入</div>
+            <div class="layui-card-body">
+                <form action="" class="layui-form">
+                    <fieldset class="layui-elem-field">
+                        <legend>OSS配置</legend>
+                        <div class="layui-field-box">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">OSS</label>
+                                <div class="layui-input-block">
+                                    <input type="checkbox" name="oss[open]" value="1" lay-text="On|Off" lay-skin="switch" lay-filter="oss_switch">
+                                </div>
+                            </div>
+                            <div id="oss_box" style="display: none;">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">BUCKET</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="oss[oss_bucket]" value="pilihuo" class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">OSS_KEY_ID</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="oss[oss_key_id]" value="LTAI4G9UPE2SvrU3csmUPxM6" class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">KEY_SECRET</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="oss[oss_key_secret]" value="1PmN2CTq97RJ0Q4DWqNlx4Rhu4iELn" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">UPLOAD_URL</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="oss[oss_upload_url]" value="http://oss-cn-hangzhou.aliyuncs.com" class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">STATIC_URL</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="oss[oss_static_url]" value="https://game.vrupup.com/resources" class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">STATIC_PATH</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="oss[oss_static_path]" value="shanxing100" class="layui-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="layui-elem-field">
+                        <legend>正式环境配置</legend>
+                        <div class="layui-field-box">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">DB_HOST</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="product[db_host]" value="rm-bp1p153yeb567lpo0.mysql.rds.aliyuncs.com" lay-verify="required" placeholder="数据库连接地址" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">DB_PORT</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[db_port]" value="3306" lay-verify="required" placeholder="数据库端口" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_CHAR</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[db_char]" value="utf8mb4" lay-verify="required" placeholder="数据库编码" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_NAME</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[db_name]" value="yangyuntian" lay-verify="required" placeholder="数据库名称" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">DB_USER</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[db_user]" value="yangyuntian" lay-verify="required" placeholder="数据库账号" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_PASS</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[db_pass]" value="seUv0iSpXCAbP5n" lay-verify="required" placeholder="数据库密码" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_PRE</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[db_pre]" value="good100_" lay-verify="required" placeholder="数据表前缀" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">REDIS_HOST</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="product[redis_host]" value="r-bp18vmtk1409q08i00.redis.rds.aliyuncs.com" lay-verify="required" placeholder="redis连接地址" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">REDIS_PORT</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[redis_port]" value="6379" lay-verify="required" placeholder="redis端口" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">REDIS_PASS</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[redis_pass]" value="1yVXE0uOItLIBCE" lay-verify="required" placeholder="redis密码" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">REDIS_INDEX</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="product[redis_index]" value="1" lay-verify="required" placeholder="redis库" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="layui-elem-field">
+                        <legend>开发环境配置</legend>
+                        <div class="layui-field-box">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">DB_HOST</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="develop[db_host]" value="127.0.0.1" lay-verify="required" placeholder="数据库连接地址" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">DB_PORT</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[db_port]" value="3306" lay-verify="required" placeholder="数据库端口" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_CHAR</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[db_char]" value="utf8mb4" lay-verify="required" placeholder="数据库编码" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_NAME</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[db_name]" value="good100" lay-verify="required" placeholder="数据库名称" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">DB_USER</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[db_user]" value="root" lay-verify="required" placeholder="数据库账号" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_PASS</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[db_pass]" value="root" placeholder="数据库密码" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">DB_PRE</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[db_pre]" value="good100_" lay-verify="required" placeholder="数据表前缀" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">REDIS_HOST</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="develop[redis_host]" value="47.110.91.60" lay-verify="required" placeholder="redis连接地址" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">REDIS_PORT</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[redis_port]" value="27635" lay-verify="required" placeholder="redis端口" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">REDIS_PASS</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[redis_pass]" value="1yVXE0uOItLIBCE" placeholder="redis密码" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">REDIS_INDEX</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="develop[redis_index]" value="1" lay-verify="required" placeholder="redis库" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn layui-btn-normal" lay-submit="">写入开发配置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="layui-col-md2"></div>
+    </div>
+</div>
+{include file="common@public/footer" /}
+<script>
+    layui.use(['form'], function() {
+        var form = layui.form;
+        var $    = layui.$;
+
+        form.render();
+
+        form.on('switch(oss_switch)', function(data) {
+            if($(data.elem).prop('checked')) {
+                $('#oss_box').show();
+            }else {
+                $('#oss_box').hide();
+            }
+        });
+
+        form.on('submit()', function(data) {
+            Post('{:url("Install/step1")}', data.field, function(res) {
+                if(res.code == 1) {
+                    alert_success(res.msg, function() {
+                        location.href = '{:url("Install/step2")}';
+                    });
+                }else {
+                    alert_error(res.msg);
+                }
+            });
+            return false;
+        });
+    });
+</script>
